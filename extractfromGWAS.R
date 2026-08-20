@@ -22,3 +22,8 @@ data <- harmonise_data(exposure_dat = exposure_data, outcome_dat = outcome_data)
 
 
 result <- mr(data)
+
+dir.create("data", showWarnings = FALSE)
+
+saveRDS(data, "data/dat.rds")
+saveRDS(result, "data/res.rds")
