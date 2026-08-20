@@ -1,4 +1,7 @@
 #simplify SAMPLE
+
+library(TwoSampleMR)
+
 set.seed(45)
 n <- 2000
 k <- 5
@@ -43,5 +46,8 @@ outcome <- do.call(rbind, lapply(1:k, function(j) {
 
 exposure
 outcome
+
+exp <- format_data(exposure, "exposure")
+out <-  format_data(outcome, "outcome")
 
 
